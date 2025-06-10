@@ -8,6 +8,7 @@ function App() {
     tg.MainButton.show();
     tg.MainButton.onClick(() => {
       tg.sendData("Дані від користувача");
+      tg.close();
     });
   }, []);
 
