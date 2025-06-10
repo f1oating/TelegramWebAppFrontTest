@@ -3,11 +3,11 @@ import { useEffect } from "react";
 function App() {
   useEffect(() => {
     const tg = window.Telegram.WebApp;
-    tg.expand(); // розгортає апку
+    tg.expand();
     tg.MainButton.setText("Надіслати");
     tg.MainButton.show();
     tg.MainButton.onClick(() => {
-      tg.sendData("Дані від користувача");
+      tg.sendData(JSON.stringify({ text: "Дані від користувача" }));
       tg.close();
     });
   }, []);
